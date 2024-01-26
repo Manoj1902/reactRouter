@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 function Github() {
   const data = useLoaderData();
@@ -22,6 +22,7 @@ function Github() {
       <h1 className="text-center text-3xl">
         Repostories : {data.public_repos}
       </h1>
+      <Link to={data.repos_url}>Click Here to See All Repos</Link>
       <div className="bg-gray-600 flex justify-center p-4">
         <img src={data.avatar_url} alt="Git Picture" width={300} />
       </div>
