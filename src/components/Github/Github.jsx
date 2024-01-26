@@ -33,6 +33,7 @@ export default Github;
 
 export const githubInfoLoader = async () => {
   const url = "https://api.github.com/users/manoj1902";
-  const response = await fetch("https://api.github.com/users/manoj1902");
+  //   const response = await fetch("https://api.github.com/users/manoj1902");
+  const response = await fetch(url);
   return response.json();
 };
